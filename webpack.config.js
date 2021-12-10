@@ -3,7 +3,10 @@ const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
-  entry: './src/index.tsx',
+  entry: ['react-hot-loader/patch', './src/index.tsx'],
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {
@@ -31,6 +34,14 @@ let config = {
 }
 const devConfig = {
   mode: 'development',
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    port: 1025,
+    historyApiFallback: true,
+    hot: 'only',
+  },
 }
 const prodConfig = {}
 

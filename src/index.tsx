@@ -1,7 +1,15 @@
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { hot } from 'react-hot-loader/root'
 
 import App from './App'
 
-import './style.css'
+import './global.css'
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+const HotApp = hot(App)
+ReactDOM.render(
+  <Router basename="/">
+    <HotApp />
+  </Router>,
+  document.querySelector('#root')
+)

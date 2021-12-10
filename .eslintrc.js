@@ -24,6 +24,9 @@ module.exports = {
      */
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+
+    // Sometimes for easy debug(add some console or debug)
+    'arrow-body-style': ['error', 'always'],
   },
   overrides: [
     {

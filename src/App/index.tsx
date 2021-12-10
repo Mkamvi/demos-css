@@ -4,12 +4,32 @@
  */
 
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+
+import Header from './Header'
+import Nav from './Nav'
+import Main from './Main'
 
 interface IProps {}
 
 // eslint-disable-next-line arrow-body-style
 const App: React.FC<IProps> = () => {
-  return <div>你好</div>
+  return (
+    <Routes>
+      <Route
+        path="/posts/:index"
+        element={
+          <div className="h-full flex flex-col">
+            <Header />
+            <div className="flex flex-row flex-grow">
+              <Nav />
+              <Main />
+            </div>
+          </div>
+        }
+      />
+    </Routes>
+  )
 }
 
 export default App
