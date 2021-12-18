@@ -47,7 +47,7 @@ const WEB_REFERENCES = [
 
 const References: React.FC<IProps> = () => {
   return (
-    <div className="min-h-full p-4 text-white bg-neutral-800">
+    <div className="h-full min-h-full p-4 overflow-y-auto text-white bg-neutral-800">
       <h1 className="mb-6 text-center lg:text-6xl text-shadow-md">Knowledge Referneces</h1>
       {WEB_REFERENCES.map(({ group, color = {}, members }) => {
         return (
