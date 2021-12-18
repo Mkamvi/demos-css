@@ -52,7 +52,7 @@ const References: React.FC<IProps> = () => {
       {WEB_REFERENCES.map(({ group, color = {}, members }) => {
         return (
           <details open key={group} className={`mb-8 shadow-lg ${color.shaodw || 'shadow-green-500'} p-4`}>
-            <summary className={`${color.text || 'text-white'}`}>{group}</summary>
+            <summary className={`${color.text || 'text-white'} outline-none`}>{group}</summary>
             <div className="flex flex-wrap gap-3 py-3 leading-none">
               {members.map((member) => {
                 return (
