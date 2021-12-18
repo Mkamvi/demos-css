@@ -11,8 +11,9 @@ const cliSays = [
   ['whoami', ['X·M']],
   ['gender', ['Male']],
   ['birth', ['199X-05-2X XX:XX:XX']],
-  ['profession', ['#ComputerEngineer #Web #React #JavaScript #HTML #CSS #LESS #']],
+  ['profession', ['#ComputerEngineer #Web #React #JavaScript #HTML #CSS #LESS']],
   ['hobby', ['#Coding #Games #Music']],
+  ['...', ['...']],
 ]
 interface IProps {}
 
