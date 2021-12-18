@@ -53,7 +53,7 @@ const Home: React.FC<IProps> = () => {
     <ReactPageScroller customPageNumber={0}>
       <div className="relative flex items-center justify-center h-full text-white">
         <div
-          className="absolute top-0 left-0 z-0 w-full h-full bg-[center_left_-10rem] lg:bg-center  bg-no-repeat bg-cover"
+          className="absolute top-0 left-0 z-0 w-full h-full bg-[center_left_-10rem] lg:bg-center  bg-no-repeat bg-cover bg-black"
           style={{ backgroundImage: `url('${bg}')`, zIndex: -1 }}
         />
         <div className="inline-block w-4/5 p-6 border rounded-md shadow-lg h-3/5 text-blue backdrop-blur-md shadow-blue-500/50 border-blue-500/50">
