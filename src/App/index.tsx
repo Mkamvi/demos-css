@@ -9,17 +9,18 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import Nav from './Nav'
 import Main from './Main'
+import Home from './Home'
 
 interface IProps {}
 
-// eslint-disable-next-line arrow-body-style
 const App: React.FC<IProps> = () => {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route
         path="/posts/:index"
         element={
-          <div className="h-full flex flex-col">
+          <div className="flex flex-col h-full">
             <Header />
             <div className="flex flex-row flex-grow">
               <Nav />

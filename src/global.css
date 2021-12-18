@@ -4,20 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .typing {
+    animation: typing 3.5s steps(attr(data-len) em, end);
+    overflow: hidden;
+  }
+}
+
+/* 打印效果 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: attr(data-len) em;
+  }
+}
+
 html,
 body,
 #root {
   height: 100%;
-}
-
-html {
-  font-size: 40px;
-}
-
-body {
-  font-size: 12px;
-}
-
-#root {
-  color: red;
 }

@@ -27,6 +27,8 @@ module.exports = {
 
     // Sometimes for easy debug(add some console or debug)
     'arrow-body-style': ['error', 'always'],
+
+    'no-plusplus': ['off'],
   },
   overrides: [
     {

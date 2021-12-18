@@ -10,9 +10,17 @@ import allPosts from '../routes'
 
 interface IProps {}
 
+function prefixZero(index: string): string {
+  let indexStr = index
+  while (indexStr.length < 3) {
+    indexStr = `0${indexStr}`
+  }
+  return indexStr
+}
+
 const Main: React.FC<IProps> = () => {
   const { index } = useParams()
-  const TestComp = allPosts[index]
+  const TestComp = allPosts[prefixZero(index)]
 
   return (
     <main className="flex-auto">

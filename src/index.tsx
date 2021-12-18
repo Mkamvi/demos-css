@@ -7,9 +7,10 @@ import App from './App'
 import './global.css'
 
 const HotApp = hot(App)
-ReactDOM.render(
+const withRouteApp = (
   <Router basename="/">
     <HotApp />
-  </Router>,
-  document.querySelector('#root')
+  </Router>
 )
+
+ReactDOM.render(withRouteApp, document.querySelector('#root'))
