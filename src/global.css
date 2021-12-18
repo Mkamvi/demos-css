@@ -5,20 +5,22 @@
 @tailwind utilities;
 
 @layer utilities {
-  .typing {
-    animation: typing 3.5s steps(attr(data-len) em, end);
-    overflow: hidden;
-  }
-}
+  @variants responsive {
+    .text-shadow {
+      text-shadow: 2px 2px 4px currentColor;
+    }
 
-/* 打印效果 */
-@keyframes typing {
-  from {
-    width: 0;
-  }
+    .text-shadow-md {
+      text-shadow: 4px 4px 8px currentColor;
+    }
 
-  to {
-    width: attr(data-len) em;
+    .text-shadow-lg {
+      text-shadow: 15px 15px 30px currentColor;
+    }
+
+    .text-shadow-none {
+      text-shadow: none;
+    }
   }
 }
 

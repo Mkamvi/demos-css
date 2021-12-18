@@ -4,7 +4,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind', 'layer'],
+        ignoreAtRules: ['tailwind', 'layer', 'variants'],
       },
     ],
   },

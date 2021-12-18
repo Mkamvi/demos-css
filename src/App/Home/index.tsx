@@ -5,6 +5,8 @@
 import { useState, useEffect } from 'react'
 import ReactPageScroller from 'react-page-scroller'
 
+import References from '../References'
+
 import bg from './bg.png'
 
 const cliSays = [
@@ -50,7 +52,7 @@ const Home: React.FC<IProps> = () => {
   }, [])
 
   return (
-    <ReactPageScroller customPageNumber={0}>
+    <ReactPageScroller customPageNumber={1}>
       <div className="relative flex items-center justify-center h-full text-white">
         <div
           className="absolute top-0 left-0 z-0 w-full h-full bg-[center_left_-10rem] lg:bg-center  bg-no-repeat bg-cover bg-black"
@@ -75,7 +77,7 @@ const Home: React.FC<IProps> = () => {
           </ul>
         </div>
       </div>
-      <span>Thanks</span>
+      <References />
     </ReactPageScroller>
   )
 }
