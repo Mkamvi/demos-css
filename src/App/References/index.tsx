@@ -43,6 +43,15 @@ const WEB_REFERENCES = [
     group: 'vue',
     members: ['basic'],
   },
+  {
+    group: 'git',
+    color: {
+      shaodw: 'shadow-rose-500',
+      text: 'text-rose-500',
+      bg: 'bg-rose-500',
+    },
+    members: ['init'],
+  },
 ]
 
 const References: React.FC<IProps> = () => {
@@ -57,7 +66,7 @@ const References: React.FC<IProps> = () => {
               {members.map((member) => {
                 return (
                   <Link
-                    to={`/${group}/${member}`}
+                    to={`/k/${group}/${member}`}
                     key={member}
                     className={`px-3 py-1 ${color.bg || 'bg-green-500'} rounded-md cursor-pointer`}
                   >
