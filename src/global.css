@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @variants responsive {
+@layer layer {
+  @utilities responsive {
     .text-shadow {
       text-shadow: 2px 2px 4px currentColor;
     }
@@ -21,6 +21,12 @@
     .text-shadow-none {
       text-shadow: none;
     }
+  }
+}
+
+@layer components {
+  .iterm {
+    @apply text-red-500 shadow-md shadow-white px-3 py-1 block;
   }
 }
 

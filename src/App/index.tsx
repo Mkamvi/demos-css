@@ -10,6 +10,7 @@ import Header from './Header'
 import Nav from './Nav'
 import Main from './Main'
 import Home from './Home'
+import Knowledges from './Knowledges'
 
 interface IProps {}
 
@@ -17,6 +18,7 @@ const App: React.FC<IProps> = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/k/*" element={<Knowledges />} />
       <Route
         path="/posts/:index"
         element={

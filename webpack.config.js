@@ -1,6 +1,13 @@
-const path = require('path')
-const { merge } = require('webpack-merge')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+import { merge } from 'webpack-merge'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+
+import remarkAttr from 'remark-attr'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 let config = {
   entry: ['react-hot-loader/patch', './src/index.tsx'],
@@ -9,6 +16,18 @@ let config = {
   },
   module: {
     rules: [
+      {
+        test: /\.mdx?$/,
+        use: [
+          'babel-loader',
+          {
+            loader: '@mdx-js/loader',
+            options: {
+              remarkPlugins: [remarkAttr],
+            },
+          },
+        ],
+      },
       {
         test: /\.(ts|tsx|js)$/,
         loader: 'babel-loader',
@@ -56,4 +75,4 @@ if (process.env.NODE_ENV === 'development') {
   config = merge(config, prodConfig)
 }
 
-module.exports = config
+export default config
