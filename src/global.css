@@ -5,22 +5,20 @@
 @tailwind utilities;
 
 @layer utilities {
-  @responsive {
-    .text-shadow {
-      text-shadow: 2px 2px 4px currentColor;
-    }
+  .text-shadow {
+    text-shadow: 2px 2px 4px currentColor;
+  }
 
-    .text-shadow-md {
-      text-shadow: 4px 4px 8px currentColor;
-    }
+  .text-shadow-md {
+    text-shadow: 4px 4px 8px currentColor;
+  }
 
-    .text-shadow-lg {
-      text-shadow: 15px 15px 30px currentColor;
-    }
+  .text-shadow-lg {
+    text-shadow: 15px 15px 30px currentColor;
+  }
 
-    .text-shadow-none {
-      text-shadow: none;
-    }
+  .text-shadow-none {
+    text-shadow: none;
   }
 }
 

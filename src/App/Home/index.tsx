@@ -72,7 +72,7 @@ const Home: React.FC<IProps> = () => {
             style={{ backgroundImage: `url('${bg}')`, zIndex: -1 }}
           />
           <div className="inline-block w-4/5 p-6 border rounded-md shadow-lg h-3/5 text-blue backdrop-blur-md shadow-blue-500/50 border-blue-500/50">
-            <h1 className="mb-4 text-4xl text-center lg:text-6xl text-gr">Welcome !</h1>
+            <h1 className="mb-4 text-4xl text-center lg:text-6xl text-gr">Welcome2 !</h1>
             <ul>
               {says.map(([cmd, output]) => {
                 return (
