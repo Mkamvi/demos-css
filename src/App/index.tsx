@@ -12,7 +12,7 @@ import Main from './Main'
 import Home from './Home'
 import Knowledges from './Knowledges'
 
-interface IProps {}
+interface IProps { }
 
 const App: React.FC<IProps> = () => {
   return (
