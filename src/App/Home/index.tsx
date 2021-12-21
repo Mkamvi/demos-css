@@ -17,7 +17,8 @@ const cliSays = [
   ['hobby', ['#Coding #Games #Music']],
   ['...', ['...']],
 ]
-interface IProps { }
+
+interface IProps {}
 
 const PAUSE_TIME = 250
 
@@ -58,7 +59,7 @@ const Home: React.FC<IProps> = () => {
   }, [])
 
   return (
-    <div className='bg-black'>
+    <div className="bg-black">
       <ReactPageScroller
         customPageNumber={page}
         blockScrollUp
